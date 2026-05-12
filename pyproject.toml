@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "speech-defect-detector"
+version = "0.1.0"
+description = "Сервис для детекции дефектов речи по скороговоркам"
+package-mode = false
+authors = ["Ilya Klimashevskiy <Klimasch2002@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/Ilya-Klim/Speech-Defect-Detection-System"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+streamlit = "^1.41.1"
+librosa = "^0.10.0"
+numpy = "^1.26.0"
+scikit-learn = "^1.6.1"
+joblib = "^1.4.0"
+python-multipart = "^0.0.20"
+loguru = "^0.7.3"
+python-dotenv = "^1.0.1"
+soundfile = "^0.12.1"
+audioread = "^3.0.0"
+
+[tool.poetry.group.client.dependencies]
+streamlit-option-menu = "^0.4.0"
+
+[tool.poetry.group.linters.dependencies]
+pre-commit = "^4.2.0"
+pylint = "^3.3.7"
+flake8 = "^7.2.0"
+isort = "^6.0.1"
+black = "^25.1.0"
+pycodestyle = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+multi_line_output = 3
+skip_gitignore = true
