@@ -4,8 +4,10 @@ from fastapi import FastAPI
 from Backend.app.api.v1.api_route import router, init_models
 from Tools.logger_config import configure_server_logging
 
+
 load_dotenv()
 configure_server_logging("../logs/")
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
